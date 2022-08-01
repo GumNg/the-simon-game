@@ -1,21 +1,26 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #011f3f;
 }
 
+/* title section */
+
 #level-title {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+  margin: 5%;
+  color: #fef2bf;
 }
+
+/* button container */
 
 .container {
   display: block;
   width: 50%;
   margin: auto;
-
 }
+
+/* buttons */
 
 .btn {
   margin: 25px;
@@ -26,10 +31,14 @@ body {
   border-radius: 20%;
 }
 
+/* gameover style */
+
 .game-over {
   background-color: red;
   opacity: 0.8;
 }
+
+/* button colors */
 
 .red {
   background-color: red;
@@ -46,6 +55,8 @@ body {
 .yellow {
   background-color: yellow;
 }
+
+/* keypress style */
 
 .pressed {
   box-shadow: 0 0 20px white;
