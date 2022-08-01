@@ -15,3 +15,6 @@ let randomNumber = nextSequence();
 
 // select random color from buttonColors array
 let randomChosenColor = buttonColors.at(randomNumber);
+
+// stores random color value inside gamePattern array
+gamePattern.push(randomChosenColor);
