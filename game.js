@@ -8,4 +8,7 @@ function nextSequence() {
 };
 
 // store function value
-let randomNumber = nextSequence()
+let randomNumber = nextSequence();
+
+// select random color from buttonColors array
+let randomChosenColor = buttonColors.at(randomNumber);
