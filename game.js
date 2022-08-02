@@ -36,7 +36,10 @@ $(document).on("click", function () {
 function nextSequence() {
   // incriment level each time function is called
   level++;
-  
+
+  //   update h1 each time function is called
+  $("#level-title").text("Level " + level);
+
   // random number generator (rng)
   let randomNumber = Math.floor(Math.random() * 4);
   //  chooses color from array using rng
