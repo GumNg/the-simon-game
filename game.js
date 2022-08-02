@@ -24,7 +24,7 @@ $(".btn").on("click", function () {
 });
 
 // detect when key has been pressed and calls nextSequence function
-$(document).on("click", function () {
+$(document).on("keydown", function () {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
