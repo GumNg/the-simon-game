@@ -17,6 +17,10 @@ $(".btn").on("click", function () {
   animatePress(userChoseColor);
 });
 
+$(document).on("click", function() {
+    
+})
+
 // function to generate next pattern sequence
 function nextSequence() {
   // random number generator (rng)
