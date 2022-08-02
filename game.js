@@ -32,3 +32,9 @@ $("#" + randomChosenColor).on("click", function () {
   let randomSound = new Audio("sounds/" + randomChosenColor + ".mp3");
   randomSound.play();
 });
+
+// detect when btn classes are clicked and log id in new variable and push into userClickedPattern array
+$(".btn").on("click", function() {
+    let userChoseColor = $(this).attr("id");
+    userClickedPattern.push(userChoseColor);
+});
