@@ -39,3 +39,11 @@ function playSound(name) {
   let randomSound = new Audio("sounds/" + name + ".mp3");
   randomSound.play();
 }
+
+// function to add animation class and timeout remove class to button pressed
+function animatePress(currentColor) {
+  $("#" + currentColor).addClass("pressed");
+  setTimeout(function() { 
+    $("#" + currentColor).removeClass("pressed");
+  }, 100);
+};
