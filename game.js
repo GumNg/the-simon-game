@@ -25,10 +25,7 @@ function nextSequence() {
   });
 
   // random color button plays sound when clicked corresponding to color
-  $("#" + randomChosenColor).on("click", function () {
-    let randomSound = new Audio("sounds/" + randomChosenColor + ".mp3");
-    randomSound.play();
-  });
+  playSound(randomChosenColor);
 }
 
 // function to play sound
