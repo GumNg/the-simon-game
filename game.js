@@ -9,18 +9,13 @@ let userClickedPattern = [];
 
 // function to generate next pattern sequence
 function nextSequence() {
-  let rng = Math.floor(Math.random() * 4);
-  return rng;
+  // random number generator (rng)
+  let randomNumber = Math.floor(Math.random() * 4);
+  //  chooses color from array using rng
+  let randomChosenColor = buttonColors[randomNumber];
+  //  logs rng color to gamePattern array
+  gamePattern.push(randomChosenColor);
 }
-
-// store function value
-let randomNumber = nextSequence();
-
-// select random color from buttonColors array
-let randomChosenColor = buttonColors.at(randomNumber);
-
-// stores random color value inside gamePattern array
-gamePattern.push(randomChosenColor);
 
 // animation for random color button to flash when clicked
 $("#" + randomChosenColor).on("click", function () {
