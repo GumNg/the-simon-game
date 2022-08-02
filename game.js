@@ -21,8 +21,8 @@ $(".btn").on("click", function () {
   playSound(userChoseColor);
 
   animatePress(userChoseColor);
-// call checkAnswer function checking the color pattern picked and lastIndex of chosen color in array
-  checkAnswer(userClickedPattern.lastIndexOf(userChoseColor))
+  // call checkAnswer function checking the color pattern picked and lastIndex of chosen color in array
+  checkAnswer(userClickedPattern.lastIndexOf(userChoseColor));
 });
 
 // detect when key has been pressed and calls nextSequence function
@@ -77,5 +77,7 @@ function animatePress(currentColor) {
 
 // function to check user answer
 function checkAnswer(currentLevel) {
-
-};
+    if(userClickedPattern[currentLevel] === gamePattern[currentLevel]){
+        let count = 0;
+    }
+}
