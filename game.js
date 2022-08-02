@@ -15,21 +15,21 @@ function nextSequence() {
   let randomChosenColor = buttonColors[randomNumber];
   //  logs rng color to gamePattern array
   gamePattern.push(randomChosenColor);
+
+  // animation for random color button to flash when clicked
+  $("#" + randomChosenColor).on("click", function () {
+    $("#" + randomChosenColor)
+      .fadeIn(100)
+      .fadeOut(100)
+      .fadeIn(100);
+  });
+
+  // random color button plays sound when clicked corresponding to color
+  $("#" + randomChosenColor).on("click", function () {
+    let randomSound = new Audio("sounds/" + randomChosenColor + ".mp3");
+    randomSound.play();
+  });
 }
-
-// animation for random color button to flash when clicked
-$("#" + randomChosenColor).on("click", function () {
-  $("#" + randomChosenColor)
-    .fadeIn(100)
-    .fadeOut(100)
-    .fadeIn(100);
-});
-
-// random color button plays sound when clicked corresponding to color
-$("#" + randomChosenColor).on("click", function () {
-  let randomSound = new Audio("sounds/" + randomChosenColor + ".mp3");
-  randomSound.play();
-});
 
 // detect when btn classes are clicked and log id in new variable and push into userClickedPattern array
 $(".btn").on("click", function () {
