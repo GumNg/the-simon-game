@@ -7,6 +7,12 @@ let gamePattern = [];
 // array to store id of button clicked
 let userClickedPattern = [];
 
+// detect when btn classes are clicked and log id in new variable and push into userClickedPattern array
+$(".btn").on("click", function () {
+  let userChoseColor = $(this).attr("id");
+  userClickedPattern.push(userChoseColor);
+});
+
 // function to generate next pattern sequence
 function nextSequence() {
   // random number generator (rng)
@@ -32,10 +38,4 @@ function nextSequence() {
 function playSound(name) {
   let randomSound = new Audio("sounds/" + name + ".mp3");
   randomSound.play();
-};
-
-// detect when btn classes are clicked and log id in new variable and push into userClickedPattern array
-$(".btn").on("click", function () {
-  let userChoseColor = $(this).attr("id");
-  userClickedPattern.push(userChoseColor);
-});
+}
