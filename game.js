@@ -23,7 +23,13 @@ $(".btn").on("click", function () {
   animatePress(userChoseColor);
 });
 
-$(document).on("click", function () {});
+$(document).on("click", function () {
+    if(!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+    }
+});
 
 // function to generate next pattern sequence
 function nextSequence() {
