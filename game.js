@@ -7,6 +7,9 @@ let gamePattern = [];
 // array to store id of button clicked
 let userClickedPattern = [];
 
+// variable to track levels
+let level = 0;
+
 // detect when btn classes are clicked and log id in new variable and push into userClickedPattern array
 $(".btn").on("click", function () {
   let userChoseColor = $(this).attr("id");
@@ -17,9 +20,7 @@ $(".btn").on("click", function () {
   animatePress(userChoseColor);
 });
 
-$(document).on("click", function() {
-    
-})
+$(document).on("click", function () {});
 
 // function to generate next pattern sequence
 function nextSequence() {
@@ -31,7 +32,7 @@ function nextSequence() {
   gamePattern.push(randomChosenColor);
 
   // animation for random color button to flash when clicked
-  $("#" + randomChosenColor).on("click", function () {
+  $("#" + randomChosenColor).on("keydown", function () {
     $("#" + randomChosenColor)
       .fadeIn(100)
       .fadeOut(100)
@@ -51,7 +52,7 @@ function playSound(name) {
 // function to add animation class and timeout remove class to button pressed
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
-  setTimeout(function() { 
+  setTimeout(function () {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
-};
+}
