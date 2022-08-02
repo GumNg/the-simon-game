@@ -4,6 +4,9 @@ let buttonColors = ["red", "blue", "green", "yellow"];
 // array to store color chosen from RandomChoseColor
 let gamePattern = [];
 
+// array to store id of button clicked
+let userClickedPattern = [];
+
 // function to generate next pattern sequence
 function nextSequence() {
   let rng = Math.floor(Math.random() * 4);
@@ -34,7 +37,7 @@ $("#" + randomChosenColor).on("click", function () {
 });
 
 // detect when btn classes are clicked and log id in new variable and push into userClickedPattern array
-$(".btn").on("click", function() {
-    let userChoseColor = $(this).attr("id");
-    userClickedPattern.push(userChoseColor);
+$(".btn").on("click", function () {
+  let userChoseColor = $(this).attr("id");
+  userClickedPattern.push(userChoseColor);
 });
