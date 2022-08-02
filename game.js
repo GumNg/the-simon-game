@@ -72,3 +72,8 @@ function animatePress(currentColor) {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
 }
+
+// function to check user answer
+function checkAnswer(currentLevel) {
+
+};
