@@ -23,6 +23,7 @@ $(".btn").on("click", function () {
   animatePress(userChoseColor);
 });
 
+// detect when key has been pressed and calls nextSequence function
 $(document).on("click", function () {
     if(!started) {
         $("#level-title").text("Level " + level);
