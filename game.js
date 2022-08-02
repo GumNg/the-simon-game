@@ -25,15 +25,18 @@ $(".btn").on("click", function () {
 
 // detect when key has been pressed and calls nextSequence function
 $(document).on("click", function () {
-    if(!started) {
-        $("#level-title").text("Level " + level);
-        nextSequence();
-        started = true;
-    }
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
 });
 
 // function to generate next pattern sequence
 function nextSequence() {
+  // incriment level each time function is called
+  level++;
+  
   // random number generator (rng)
   let randomNumber = Math.floor(Math.random() * 4);
   //  chooses color from array using rng
