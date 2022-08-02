@@ -11,6 +11,10 @@ let userClickedPattern = [];
 $(".btn").on("click", function () {
   let userChoseColor = $(this).attr("id");
   userClickedPattern.push(userChoseColor);
+
+  playSound(userChoseColor);
+
+  animatePress(userChoseColor);
 });
 
 // function to generate next pattern sequence
