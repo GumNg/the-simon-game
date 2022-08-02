@@ -7,6 +7,9 @@ let gamePattern = [];
 // array to store id of button clicked
 let userClickedPattern = [];
 
+// variable to track if game has been started
+let started = false;
+
 // variable to track levels
 let level = 0;
 
