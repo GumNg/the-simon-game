@@ -77,13 +77,17 @@ function animatePress(currentColor) {
 
 // function to check user answer
 function checkAnswer(currentLevel) {
-  if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
+  // checks if the most recent answer matches game pattern then executes code
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     console.log("Success!");
+    // checks to see if user has finished their sequence if previous statement is true
     if (userClickedPattern.length === gamePattern.length) {
+      //   call nextSequence after 1000 milisecond delay
       setTimeout(function () {
         nextSequence();
       }, 1000);
     }
+    // if previous statements are false execute code
   } else {
     console.log("Wrong!");
   }
