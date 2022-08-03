@@ -91,6 +91,8 @@ function checkAnswer(currentLevel) {
     }, 200);
     // query title to change text to notify user game over
     $("#level-title").text("Game Over, Press Any Key to Restart!");
+    // call function to restart game
+    startOver();
   }
 }
 
