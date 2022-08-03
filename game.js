@@ -94,6 +94,13 @@ function checkAnswer(currentLevel) {
   }
 }
 
+// function to reset values and restart game
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
+}
+
 // function to play sound
 function playSound(name) {
   let randomSound = new Audio("sounds/" + name + ".mp3");
