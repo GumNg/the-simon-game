@@ -89,6 +89,8 @@ function checkAnswer(currentLevel) {
     setTimeout(function () {
       $("body").removeClass("game-over");
     }, 200);
+    // query title to change text to notify user game over
+    $("#level-title").text("Game Over, Press Any Key to Restart!");
   }
 }
 
