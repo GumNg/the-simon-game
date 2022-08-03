@@ -36,6 +36,9 @@ $(document).on("keydown", function () {
 
 // function to generate next pattern sequence
 function nextSequence() {
+  // when nextSequence is triggered, reset to empty array ready for next level
+  userClickedPattern = [];
+
   // incriment level each time function is called
   level++;
 
