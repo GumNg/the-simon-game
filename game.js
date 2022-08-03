@@ -78,13 +78,6 @@ function animatePress(currentColor) {
 // function to check user answer
 function checkAnswer(currentLevel) {
     if(userClickedPattern[currentLevel] === gamePattern[currentLevel]){
-        let count = 0;
-        // loop through two arrays, and check if both values are the same
-        for(i = 0; i < gamePattern.length; i++){
-            if(gamePattern[i] === userClickedPattern[i]){
-                // incriment if they values match
-                count++
-            }
-        }
-    }
+     console.log("Success!");
+}
 }
