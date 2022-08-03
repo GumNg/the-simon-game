@@ -81,6 +81,8 @@ function checkAnswer(currentLevel) {
     }
     // if previous statements are false execute code
   } else {
+    // call playSound function to play "wrong" sound
+    playSound("wrong");
     // adds game-over class to body when answer is wrong
     $("body").addClass("game-over");
     // removes game-over class and 200 ms
