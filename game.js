@@ -95,6 +95,8 @@ function checkAnswer(currentLevel) {
     }
     // if previous statements are false execute code
   } else {
-    console.log("Wrong!");
+    // adds game-over class to body when answer is wrong
+    $("body").addClass("game-over");
+
   }
 }
