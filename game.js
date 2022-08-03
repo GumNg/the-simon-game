@@ -60,8 +60,11 @@ function nextSequence() {
       .fadeIn(100);
   });
 
-  // random color button plays sound when clicked corresponding to color
+  // call playSound to play sound from rng when nextSequence is triggered
   playSound(randomChosenColor);
+
+  // call animatePress to show color from rng when nextSequence is triggered
+  animatePress(randomChosenColor);
 }
 
 // function to play sound
