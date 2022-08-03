@@ -22,7 +22,7 @@ $(".btn").on("click", function () {
 
   animatePress(userChoseColor);
   // call checkAnswer function checking the color pattern picked and lastIndex of chosen color in array
-  checkAnswer(userClickedPattern.length-1);
+  checkAnswer(userClickedPattern.length - 1);
 });
 
 // detect when key has been pressed and calls nextSequence function
@@ -77,12 +77,14 @@ function animatePress(currentColor) {
 
 // function to check user answer
 function checkAnswer(currentLevel) {
-    if(userClickedPattern[currentLevel] === gamePattern[currentLevel]){
-     console.log("Success!");
-     if(userClickedPattern.length === gamePattern.length) {
-        setTimeout(function() { 
-            nextSequence();
-        }, 1000);
-     }
-}
+  if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
+    console.log("Success!");
+    if (userClickedPattern.length === gamePattern.length) {
+      setTimeout(function () {
+        nextSequence();
+      }, 1000);
+    }
+  } else {
+    console.log("Wrong!");
+  }
 }
