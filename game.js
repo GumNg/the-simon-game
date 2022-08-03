@@ -67,20 +67,6 @@ function nextSequence() {
   animatePress(randomChosenColor);
 }
 
-// function to play sound
-function playSound(name) {
-  let randomSound = new Audio("sounds/" + name + ".mp3");
-  randomSound.play();
-}
-
-// function to add animation class and timeout remove class to button pressed
-function animatePress(currentColor) {
-  $("#" + currentColor).addClass("pressed");
-  setTimeout(function () {
-    $("#" + currentColor).removeClass("pressed");
-  }, 100);
-}
-
 // function to check user answer
 function checkAnswer(currentLevel) {
   // checks if the most recent answer matches game pattern then executes code
@@ -98,8 +84,22 @@ function checkAnswer(currentLevel) {
     // adds game-over class to body when answer is wrong
     $("body").addClass("game-over");
     // removes game-over class and 200 ms
-   setTimeout(function() {
-    $("body").removeClass("game-over");
-   }, 200)
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
   }
+}
+
+// function to play sound
+function playSound(name) {
+  let randomSound = new Audio("sounds/" + name + ".mp3");
+  randomSound.play();
+}
+
+// function to add animation class and timeout remove class to button pressed
+function animatePress(currentColor) {
+  $("#" + currentColor).addClass("pressed");
+  setTimeout(function () {
+    $("#" + currentColor).removeClass("pressed");
+  }, 100);
 }
