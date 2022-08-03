@@ -97,6 +97,9 @@ function checkAnswer(currentLevel) {
   } else {
     // adds game-over class to body when answer is wrong
     $("body").addClass("game-over");
-
+    // removes game-over class and 200 ms
+   setTimeout(function() {
+    $("body").removeClass("game-over");
+   }, 200)
   }
 }
