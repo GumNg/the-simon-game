@@ -22,7 +22,7 @@ $(".btn").on("click", function () {
 
   animatePress(userChoseColor);
   // call checkAnswer function checking the color pattern picked and lastIndex of chosen color in array
-  checkAnswer(userClickedPattern.lastIndexOf(userChoseColor));
+  checkAnswer(userClickedPattern.length-1);
 });
 
 // detect when key has been pressed and calls nextSequence function
